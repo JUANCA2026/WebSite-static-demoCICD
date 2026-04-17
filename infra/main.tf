@@ -4,15 +4,15 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "bicket-johansuescunstate-terraform"
-    key    = "terraform.tfstate"
+    bucket = "bucket-johansuescunstate-terraform"
+    key    = "github-actions-demo-juancamilo.tfstate"
     region = "us-east-1"
     encrypt = true
   }
 }
 
 resource "aws_s3_bucket" "web" {
-  bucket = "johansuescun-githubaccions-demo"
+  bucket = "juancamilo-githubaccions-demo"
 }
 
 resource "aws_s3_bucket_website_configuration" "web_config" {
@@ -41,7 +41,7 @@ resource "aws_s3_bucket_policy" "public_read" {
       Effect = "Allow",
       Principal = "*",
       Action = "s3:GetObject",
-      Resource = "arn:aws:s3:::tu-bucket-web-unico-123/*"
+      Resource = ""arn:aws:s3:::juancamilo-githubaccions-demo/*""
     }]
   })
 }
