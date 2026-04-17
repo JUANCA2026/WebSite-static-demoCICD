@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "TU-BUCKET-STATE"   # ⚠️ ya creado en AWS
+    bucket = "bicket-johansuescunstate-terraform"
     key    = "terraform.tfstate"
     region = "us-east-1"
     encrypt = true
@@ -12,7 +12,7 @@ terraform {
 }
 
 resource "aws_s3_bucket" "web" {
-  bucket = "tu-bucket-web-unico-123"
+  bucket = "johansuescun-githubaccions-demo"
 }
 
 resource "aws_s3_bucket_website_configuration" "web_config" {
